@@ -14,4 +14,9 @@ describe('edge cases', () => {
       expect(paintRequiredForCopies(3, 2, 1)).toBe(0.8);
     });
 });
+describe('decimal precision', () => {
+    test('handles fractional dimensions', () => {
+      expect(paintRequiredForCopies(2.5, 1.5, 100)).toBeCloseTo(33.333, 2);
+    });
+});
 });
