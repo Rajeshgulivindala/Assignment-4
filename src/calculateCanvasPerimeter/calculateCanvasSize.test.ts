@@ -12,4 +12,8 @@ describe("calculateCanvasSize", () => {
   test("handles decimal numbers by truncating", () => {
     expect(calculateCanvasSize("10.5", "20.9")).toEqual(60); // 2*(10+20) = 60
   });
+  test("handles empty strings", () => {
+    expect(calculateCanvasSize("", "10")).toBeNaN();
+    expect(calculateCanvasSize("", "")).toBeNaN();
+  });
 })
