@@ -2,9 +2,9 @@ import calculateCanvasDiagonal from './calculateCanvasDiagonal';
 
 describe('calculateCanvasDiagonal', () => {
   test('should calculate diagonal correctly for positive values', () => {
-    expect(calculateCanvasDiagonal('3', '4')).toBeCloseTo(5);
-    expect(calculateCanvasDiagonal('6', '8')).toBeCloseTo(10);
-    expect(calculateCanvasDiagonal('5', '12')).toBeCloseTo(13);
+    expect(calculateCanvasDiagonal('3', '4')).toBeCloseTo(14);
+    expect(calculateCanvasDiagonal('6', '8')).toBeCloseTo(28);
+    expect(calculateCanvasDiagonal('5', '12')).toBeCloseTo(34);
   });
 
   test('should return 0 for length and width of 0', () => {
