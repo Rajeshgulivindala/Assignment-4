@@ -9,4 +9,9 @@ describe('paintRequiredForCopies', () => {
         expect(paintRequiredForCopies(6, 4, 1000)).toBe(3200);
       });
 });
+describe('edge cases', () => {
+    test('handles single copy', () => {
+      expect(paintRequiredForCopies(3, 2, 1)).toBe(0.8);
+    });
+});
 });
