@@ -20,5 +20,9 @@ describe("calculateCanvasSize - Area Calculation", () => {
   test("truncates decimal values", () => {
     expect(calculateCanvasSize("5.9", "2.1")).toBe(10); // 5*2=10
   });
-
+// Invalid inputs
+test("returns NaN for non-numeric strings", () => {
+    expect(calculateCanvasSize("abc", "10")).toBeNaN();
+    expect(calculateCanvasSize("10", "xyz")).toBeNaN();
+  });
 })
