@@ -19,4 +19,8 @@ describe('convertAreaToSquareFeet', () => {
   test('returns 0 for 0 input', () => {
     expect(convertAreaToSquareFeet(0)).toBe(0);
   });
+  test('handles decimal inputs precisely', () => {
+    expect(convertAreaToSquareFeet(2.5)).toBeCloseTo(26.90975, 5); // 2.5m² → 26.90975ft²
+  });
+
 });
