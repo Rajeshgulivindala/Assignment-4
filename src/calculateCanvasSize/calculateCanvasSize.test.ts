@@ -12,5 +12,8 @@ describe("calculateCanvasSize - Area Calculation", () => {
     expect(calculateCanvasSize("10", "0")).toBe(0);
     expect(calculateCanvasSize("0", "0")).toBe(0);
   });
-
+  test("calculates with negative values", () => {
+    expect(calculateCanvasSize("-5", "4")).toBe(-20);
+    expect(calculateCanvasSize("-3", "-2")).toBe(6);
+  });
 })
