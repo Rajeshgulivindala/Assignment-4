@@ -6,4 +6,7 @@ describe("paint required calculator", () => {
 
     expect(result).toEqual(5);
   });
+  test('returns 0 when area is 0', () => {
+    expect(paintRequiredCalculator(0, 10)).toBe(0);
+  });
 });
