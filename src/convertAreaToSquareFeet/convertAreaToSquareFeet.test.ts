@@ -16,4 +16,7 @@ describe('convertAreaToSquareFeet', () => {
     expect(convertAreaToSquareFeet(-200)).toBeCloseTo(-2152.78);
     expect(convertAreaToSquareFeet(-150)).toBeCloseTo(-1614.585);
   });
+  test('returns 0 for 0 input', () => {
+    expect(convertAreaToSquareFeet(0)).toBe(0);
+  });
 });
